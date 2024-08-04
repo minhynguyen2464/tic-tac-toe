@@ -1,0 +1,69 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #282a36; /* Dark background for the entire page */
+	color: #f8f8f2; /* Light text color for contrast */
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 120px); /* Increased size */
+	grid-template-rows: repeat(3, 120px); /* Increased size */
+	gap: 0px;
+}
+
+.cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 120px; /* Increased size */
+	height: 120px; /* Increased size */
+	background-color: #44475a; /* Slightly lighter dark background for cells */
+	border: 3px solid #6272a4; /* Border color */
+	border-radius: 0px;
+	font-size: 4rem; /* Increased font size for larger icons */
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+.cell:hover {
+	/* background-color: #f0f0f0;
+	transform: scale(1.1); */
+}
+
+.cell.x::before {
+	content: '\f00d'; /* Font Awesome "times" icon */
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	color: #f976c7;
+	animation: appear 0.3s ease-out;
+}
+
+.cell.o::before {
+	content: '\f111'; /* Font Awesome "circle" icon from Regular set */
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400; /* Regular weight */
+	color: #87e9ff;
+	animation: appear 0.3s ease-out;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+#winner {
+	color: green;
+}
+
+#draw {
+	color: orange;
+}

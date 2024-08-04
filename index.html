@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tic-Tac-Toe</title>
+		<link
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container text-center mt-5">
+			<h1>Tic - Tac - Toe</h1>
+			<div id="game" class="d-flex justify-content-center mt-4">
+				<div id="board" class="grid">
+					<div class="cell" data-index="0"></div>
+					<div class="cell" data-index="1"></div>
+					<div class="cell" data-index="2"></div>
+					<div class="cell" data-index="3"></div>
+					<div class="cell" data-index="4"></div>
+					<div class="cell" data-index="5"></div>
+					<div class="cell" data-index="6"></div>
+					<div class="cell" data-index="7"></div>
+					<div class="cell" data-index="8"></div>
+				</div>
+			</div>
+			<button
+				id="restart"
+				class="btn btn-primary mt-4"
+				style="background-color: #87e9ff"
+			>
+				Restart
+			</button>
+		</div>
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="gameResultModal"
+			tabindex="-1"
+			aria-labelledby="gameResultModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<h1 id="modalMessage" class="mb-3"></h1>
+						<i id="resultIcon" class="fas fa-trophy fa-3x"></i>
+						<!-- Trophy icon -->
+					</div>
+					<div class="modal-footer d-flex justify-content-center">
+						<button type="button" class="btn btn-primary" id="modalRestart">
+							Play Again
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
